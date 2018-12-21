@@ -1,0 +1,83 @@
+/* pages/cutPictures/cutPictures.wxss */
+.cutPictures{
+  width: 100vw;
+  height: 100vh;
+}
+.cover-preview{
+  width: 100%;
+  background-color: black;
+  height: 100%;
+}
+#croper{
+  width: 750rpx;
+  height: 366rpx;
+  position: absolute;
+  top: 400rpx;
+  left: 0;
+  background-color: rgba(135,206,250,0.5);
+}
+.showImg{
+  position: fixed;
+  top:0rpx;
+  left: 0rpx;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+}
+.moveImg{
+  background-size: 100%;
+  background-position: 0rpx 0rpx;
+  background-repeat: no-repeat;
+  width: 100vw;
+}
+.bindMove{
+  background-size: 100%;
+  background-position: 0rpx 0rpx;
+  background-repeat: no-repeat;
+}
+
+.showImg_footer{
+  width: 100%;
+  height: 100rpx;
+  position: absolute;
+  bottom: 0rpx;
+  left: 0rpx;
+  display: flex;
+  justify-content: center;
+}
+.showImg_footer_list{
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #333;
+  background-color: #fff;
+}
+.sure{
+  color: #fff;
+  background-color: #7c94ca;
+}
+#croper-sure{
+  width: 120rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+  color: black;
+  background-color: rgba(135,206,250,0.8);
+  font-size: 40rpx;
+  position: absolute;
+  top: 786rpx;
+  right: 10rpx;
+  text-align: center
+}
+#croper-cancel{
+  width: 120rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+  color: black;
+  background-color: rgba(135,206,250,0.8);
+  font-size: 40rpx;
+  position: absolute;
+  top: 786rpx;
+  right: 150rpx;
+  text-align: center
+}

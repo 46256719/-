@@ -1,0 +1,40 @@
+<!--pages/cutPictures/cutPictures.wxml-->
+<view class='cutPictures'>
+  <button bindtap='change_cover'>选择图片</button>
+  <canvas hidden='{{hide}}' class='cover-preview' disable-scroll='true' canvas-id='cover-preview'>
+
+  </canvas> 
+
+  <view class="showImg" hidden="{{hide_canvas}}">
+    <movable-area class="moveImg" style=";height:{{height}}rpx">
+      <movable-view
+        class='bindMove'
+        scale="true"
+        direction="all"
+        out-of-bounds="true"
+        bindscale="img_scale"
+        scale-max="2"
+        scale-min="1"
+        style="width: 100vw;background-image:url({{backImgUrl}});height:{{imgHeight}}rpx"
+        bindchange="img_move">
+        <image src='{{backImgUrl}}' style="width: 100vw;height:{{imgHeight}}rpx"></image>
+      </movable-view>
+      <movable-view
+        scale="true"
+        direction="all"
+        bindchange="cut_move"
+        bindscale="cut_scale"
+        scale-max="1"
+        scale-min="0.5"
+        style='width: 100vw;height:360rpx;background: blue;'>
+      </movable-view>
+    </movable-area>
+    <view class='showImg_footer'>
+      <view catchtap='cancel_croper' class='showImg_footer_list'>取消</view>
+      <view catchtap='upload_bg' class='showImg_footer_list sure'>确定</view>
+    </view>
+    <image style='position:absolute;left:0rpx;top:0rpx;' src="{{q4}}" hidden="{{!q4}}"></image>
+  </view>
+
+  <image src='{{edit_url}}' style='width:100vw;' mode="aspectFit"></image>
+</view>
